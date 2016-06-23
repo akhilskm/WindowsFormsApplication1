@@ -22,9 +22,20 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double n1,n2;
+            double n1, n2;
             if (Double.TryParse(num1.Text, out n1)&& Double.TryParse(num2.Text, out n2))
-                answer.Text = (n1+n2).ToString();
+            {
+                if (op.Text.Equals("+"))
+                    answer.Text = (n1 + n2).ToString();
+                else if (op.Text.Equals("-"))
+                    answer.Text = (n1 - n2).ToString();
+                else if (op.Text.Equals("x"))
+                    answer.Text = (n1 * n2).ToString();
+                else if (op.Text.Equals("/"))
+                    answer.Text = (n1 / n2).ToString();
+                else
+                    answer.Text = "Specify Operator";
+            }
             else
                 answer.Text = "Invalid Number";
         }

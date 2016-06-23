@@ -31,9 +31,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.num1 = new System.Windows.Forms.TextBox();
             this.num2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.answer = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.op = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
@@ -49,7 +49,7 @@
             // num1
             // 
             this.num1.AccessibleName = "num1";
-            this.num1.Location = new System.Drawing.Point(78, 64);
+            this.num1.Location = new System.Drawing.Point(72, 64);
             this.num1.Name = "num1";
             this.num1.Size = new System.Drawing.Size(50, 20);
             this.num1.TabIndex = 1;
@@ -59,21 +59,12 @@
             // num2
             // 
             this.num2.AccessibleName = "num2";
-            this.num2.Location = new System.Drawing.Point(153, 64);
+            this.num2.Location = new System.Drawing.Point(173, 64);
             this.num2.Name = "num2";
             this.num2.Size = new System.Drawing.Size(50, 20);
             this.num2.TabIndex = 2;
             this.num2.Text = "Num2";
             this.num2.Enter += new System.EventHandler(this.num2_Enter);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(134, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "+";
             // 
             // answer
             // 
@@ -92,14 +83,27 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Answer : ";
             // 
+            // op
+            // 
+            this.op.FormattingEnabled = true;
+            this.op.Items.AddRange(new object[] {
+            "+",
+            "-",
+            "x",
+            "/"});
+            this.op.Location = new System.Drawing.Point(128, 64);
+            this.op.Name = "op";
+            this.op.Size = new System.Drawing.Size(39, 21);
+            this.op.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.op);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.answer);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.num2);
             this.Controls.Add(this.num1);
             this.Controls.Add(this.button1);
@@ -115,9 +119,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox num1;
         private System.Windows.Forms.TextBox num2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label answer;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox op;
     }
 }
 
